@@ -68,7 +68,6 @@ public class DrawGrid extends View {
             aCase.draw(canvas);
     }
 
-    @Override
     public boolean onTouch(View v, MotionEvent event) {
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
