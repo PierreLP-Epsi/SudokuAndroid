@@ -60,7 +60,7 @@ public class ChoiceGrid extends Activity {
        listGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                Bundle bun = new Bundle();
-               bun.putSerializable("grid", grids.get(position).toString());
+               bun.putString("grid", grids.get(position).toString());
                Intent intent = new Intent(ChoiceGrid.this, DisplayGrid.class);
                intent.putExtras(bun);
                startActivity(intent);
