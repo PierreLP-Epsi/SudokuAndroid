@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Point;
 import android.view.Display;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import java.util.LinkedList;
@@ -65,5 +66,18 @@ public class DrawGrid extends View {
     public void onDraw(Canvas canvas) {
         for (Case aCase : aCases)
             aCase.draw(canvas);
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        switch (event.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                break;
+            case MotionEvent.ACTION_UP:
+                break;
+        }
+
+        this.invalidate();
+        return true;
     }
 }
