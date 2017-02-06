@@ -33,7 +33,7 @@ public class DrawGrid extends View {
         int x = size.x;
         int y = size.y;
 
-        //on prend 80% de la taille de l'écran pour la grille
+        //On prend 80% de la taille de l'écran pour la grille
         y = (y*80)/100;
 
         y = y/9;

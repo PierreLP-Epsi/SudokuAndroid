@@ -17,6 +17,7 @@ public class ChoiceLevel extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice_level);
 
+        //Définition des bouttons
         lvl1 = (Button) findViewById(R.id.Level1);
         lvl2 = (Button) findViewById(R.id.Level2);
         lvl3 = (Button) findViewById(R.id.Level3);
@@ -26,6 +27,7 @@ public class ChoiceLevel extends Activity implements View.OnClickListener {
         lvl3.setOnClickListener(this);
     }
 
+    //On envoie le boutton qui a été touché
     public void onClick(View v) {
         int id = v.getId();
         Bundle bun = new Bundle();

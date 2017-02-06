@@ -25,6 +25,8 @@ public class ChoiceGrid extends Activity {
        String line = "";
        int level = this.getIntent().getExtras().getInt("key");
 
+       //On sélectionne le fichier correspondant au niveau
+       //de difficulté choisi
        if (level == 1) {
            file = R.raw.level1;
        }
@@ -37,6 +39,7 @@ public class ChoiceGrid extends Activity {
            file = R.raw.level3;
        }
 
+       //On le lis
        InputStream iStream = getResources().openRawResource(file);
        BufferedReader bReader = new BufferedReader(new InputStreamReader(iStream));
 
@@ -51,12 +54,14 @@ public class ChoiceGrid extends Activity {
                e.printStackTrace();
            }
 
+           //On ajoute chaque ligne à la liste de grille
            grids.add(new ListGrid(i, level, 0, line));
            i++;
        }
 
        while (line != null);
 
+       //On envoie la grille qui a été touchée dans la liste (via sa position)
        listGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                Bundle bun = new Bundle();

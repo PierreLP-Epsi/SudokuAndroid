@@ -18,6 +18,7 @@ public class DisplayGrid extends Activity {
         Bundle bundle = this.getIntent().getExtras();
         grid = bundle.getString("grid");
 
+        //On retire le haut de l'écran
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 

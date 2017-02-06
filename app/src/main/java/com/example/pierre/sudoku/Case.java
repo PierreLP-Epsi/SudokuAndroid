@@ -6,7 +6,7 @@ import android.graphics.Paint;
 
 public class Case {
     int xStart, yStart, xStop, yStop, number;
-    boolean canWrite;
+    //boolean canWrite;
     private Paint paint;
 
     public Case(int xStart, int yStart, int xStop, int yStop) {
@@ -14,15 +14,17 @@ public class Case {
         this.yStart = yStart;
         this.xStop = xStop;
         this.yStop = yStop;
-        this.number = number;
+        //this.number = number;
         paint = new Paint();
         paint.setColor(Color.GRAY);
-        if(number > 0) {
-            canWrite= false;
-        }
-        else {
-            canWrite = true;
-        }
+
+        //Vérif pour savoir si on peut écrire dans la case
+        //if(number > 0) {
+        //    canWrite= false;
+        //}
+        //else {
+        //    canWrite = true;
+        //}
     }
 
     public void draw(Canvas canvas) {
