@@ -72,8 +72,10 @@ public class DrawGrid extends View {
     public boolean onTouch(View v, MotionEvent event) {
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
+                //TODO
                 break;
             case MotionEvent.ACTION_UP:
+                //TODO
                 break;
         }
 
