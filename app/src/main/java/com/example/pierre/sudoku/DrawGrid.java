@@ -13,12 +13,16 @@ public class DrawGrid extends View {
     Case[][] matGrid = new Case[9][9];
 
     LinkedList<Case> aCases;
+    //TODO Récupérer la grid
     public DrawGrid(Context context) {
         super(context);
         aCases = new LinkedList<>();
+
+        //TODO Envoyer grid
         onCreate();
     }
 
+    //TODO Lire la grid pour remplir les numéros
     public void onCreate() {
         Context context = getContext();
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);

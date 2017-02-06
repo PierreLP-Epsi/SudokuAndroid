@@ -20,9 +20,11 @@ public class DisplayGrid extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        
+
         drawGrid = new DrawGrid(this);
         drawGrid.setBackgroundColor(Color.BLACK);
+
+        //TODO Envoyer grid à DrawGrid pour les numéros
         setContentView(drawGrid);
     }
 }
