@@ -10,6 +10,15 @@ import java.util.LinkedList;
 
 public class DrawGrid extends View {
 
+    Case[][] matGrid = new Case[9][9];
+
+    LinkedList<Case> aCases;
+    public DrawGrid(Context context) {
+        super(context);
+        aCases = new LinkedList<>();
+        onCreate();
+    }
+
     public void onCreate() {
         Context context = getContext();
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -46,13 +55,6 @@ public class DrawGrid extends View {
             aCases.add(new Case((x*k)+5, (y*10), (x*(k+1))-5, (y*11)));
             k++;
         }
-    }
-
-    LinkedList<Case> aCases;
-    public DrawGrid(Context context) {
-        super(context);
-        aCases = new LinkedList<>();
-        onCreate();
     }
 
     @Override
